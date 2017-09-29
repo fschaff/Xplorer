@@ -18,8 +18,6 @@ devtools::install_github("fschaff/Xplorer")
 Example
 -------
 
-This is a basic example which shows you how to solve a common problem:
-
 ``` r
 # load package
 library(Xplorer)
