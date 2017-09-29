@@ -1,0 +1,38 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# Xplorer
+
+The goal of Xplorer is to provide a more convenient way for data exploration than existing packages.
+
+## Installation
+
+You can install Xplorer from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("fschaff/Xplorer")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+# load package
+library(Xplorer)
+
+# see an object
+see(mtcars$mpg)
+```
