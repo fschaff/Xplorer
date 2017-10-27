@@ -17,10 +17,9 @@ Browser shows variable details such as names, labels, range, distinct values, cl
 # create data.frame
 numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
 labelled.numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
-attr(labelled.numeric, "label") <- "my.variable.label"
+attributes(labelled.numeric)$label <- "my.variable.label"
 df <- data.frame(numeric, labelled.numeric)
-
-# open data.frame in Viewer window
+# View(df)
 }
 \keyword{browse}
 \keyword{browser}

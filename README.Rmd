@@ -14,9 +14,9 @@ knitr::opts_chunk$set(
 
 # Xplorer: Convenient Data Exploration with see() and browse()
 
-Xplorer provides two simple functions to facilitate the exploration of datasets in R, `see()` and `browse()`.
+Xplorer provides two simple functions to facilitate the exploration of datasets in R, [`see()`](#see) and [`browse()`](#browse).
 
-## see()
+## see() {#see}
 
 `see()` prints the following details of an object to the console:
 
@@ -50,25 +50,29 @@ see(numeric.labelled)
 ```
 
 
-## browse()
+## browse() {#browse}
 
 The aim of `browse()` is to create a data.frame that allows you to use the search field in the Rstudio `View()` function to search for variables based on their names or values, which is currently not possible. In particular if a dataset is very large and no comprehensive codebook is available, quickly searching for variable names makes finding variables of interest much easier. 
 
-If you are not working in Rstudio, `View()` may not work in the same way and may not offer a search option. Hence `browse()` does not call `View()` directly. Instead, it stores "browse.data" in the global environment. This then can be opened with `View(browse(data))` in Rstudio.
+If you are not working in Rstudio, `View()` may not work in the same way and may not offer a search option. Hence `browse()` does not call `View()` directly. Instead, store the data in a new object first, which then can be opened with `View()` in Rstudio.
 
 #### Example
 
 ```{r}
-library(Xplorer)
+library("Xplorer")
 
-# create browse.mtcars
-browse(mtcars)
+# create an example data.frame and add some variable labels
+data(mtcars)
+attributes(mtcars$mpg)$label <- "Miles/(US) gallon"
+attributes(mtcars$disp)$label <- "Displacement (cu.in.)"
+attributes(mtcars$drat)$label <- "Rear axle ratio"
+df <- browse(mtcars)
 ```
-Then use `View(browse.mtcars)` and search variable names and attributes in the search field.
+Then use `View(df)` and use the search field to search variable names and labels.
 
 ## Installation
 
-You can install Xplorer from github with:
+You can install Xplorer from GitHub with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
