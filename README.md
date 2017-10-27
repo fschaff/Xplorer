@@ -33,7 +33,7 @@ library(Xplorer)
 
 # Create example data
 numeric.labelled <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
-attr(numeric.labelled, "label") <- "mylabel"
+attributes(numeric.labelled)$label <- "mylabel"
 
 # see the object
 see(numeric.labelled)
