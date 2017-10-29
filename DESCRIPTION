@@ -3,12 +3,8 @@ Title: Convenient Data Exploration
 Version: 0.0.0.9000
 Authors@R: person("Florian Simon", "Schaffner", email = "schaffner.florian@gmail.com", role = c("aut", "cre"))
 Description: Xplorer provides functions to help facilitate data exploration.
-Depends: R (>= 3.4.1)
-Imports: Hmisc
+Depends: R (>= 3.4.0)
 License: MIT + file LICENSE
-Encoding: UTF-8
 LazyData: true
+Encoding: UTF-8
 RoxygenNote: 6.0.1
-Suggests: knitr,
-    rmarkdown
-VignetteBuilder: knitr
