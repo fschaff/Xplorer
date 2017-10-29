@@ -12,12 +12,14 @@
 #' @keywords see codebook
 #' @importFrom utils str
 #' @examples
+#' library("Xplorer")
+#'
 #' numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
 #' see(numeric)
 #'
 #' labelled.numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
 #' attributes(labelled.numeric)$label <- "my_variable_label"
-#' codebook(labelled.numeric)
+#' see(labelled.numeric)
 
 #' @export
 see <- function (x) {
