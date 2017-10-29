@@ -72,6 +72,8 @@ Then use `View(df)` and use the search field to search variable names and labels
 
 ## Installation
 
+[![Build Status](https://travis-ci.org/fschaff/Xplorer?branch=master)](https://travis-ci.org/fschaff/Xplorer)
+
 You can install Xplorer from CRAN with:
 ```{r cran-installation, eval = FALSE}
 install.packages("Xplorer")
