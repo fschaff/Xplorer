@@ -16,7 +16,7 @@
 #' see(numeric)
 #'
 #' labelled.numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
-#' attr(labelled.numeric, "label") <- "my.variable.label"
+#' attributes(labelled.numeric)$label <- "my_variable_label"
 #' codebook(labelled.numeric)
 
 #' @export
