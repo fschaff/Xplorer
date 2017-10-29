@@ -29,7 +29,7 @@ There are several other packages which attempt to do someting similar, but none 
 #### Example
 
 ``` r
-library(Xplorer)
+library("Xplorer")
 
 # Create example data
 numeric.labelled <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
@@ -81,8 +81,6 @@ Then use `View(df)` and use the search field to search variable names and labels
 
 Installation
 ------------
-
-[![Build Status](https://travis-ci.org/fschaff/Xplorer?branch=master)](https://travis-ci.org/fschaff/Xplorer)
 
 You can install Xplorer from CRAN with:
 
