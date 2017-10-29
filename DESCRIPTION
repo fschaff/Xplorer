@@ -4,6 +4,8 @@ Version: 0.0.1
 Authors@R: person("Florian Simon", "Schaffner", email = "schaffner.florian@gmail.com", role = c("aut", "cre"))
 Description: Xplorer provides functions to help facilitate data exploration.
 Depends: R (>= 3.4.0)
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
 License: MIT + file LICENSE
 LazyData: true
 Encoding: UTF-8
