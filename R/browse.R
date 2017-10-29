@@ -12,7 +12,9 @@
 #' labelled.numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
 #' attributes(labelled.numeric)$label <- "my_variable_label"
 #' df <- data.frame(numeric, labelled.numeric)
-#' # View(df)
+#' \dontrun{
+#' View(df)
+#' }
 
 #' @export
 browse <- function(x) {

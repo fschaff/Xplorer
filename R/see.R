@@ -10,10 +10,8 @@
 #'
 #' @param x The object to be displayed in the console.
 #' @keywords see codebook
-#' @importFrom utils str
+#' @import utils
 #' @examples
-#' library("Xplorer")
-#'
 #' numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
 #' see(numeric)
 #'
