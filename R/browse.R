@@ -4,16 +4,11 @@
 #' Browser shows variable details such as names, labels, range, distinct values, class, typeof, non-missing cases and missing cases.
 #' @param x The dataset to be opened in the Viewer.
 #' @keywords browse browser variable variables
-#' @importFrom stats median na.omit sd var
+#' @import stats
 #' @import utils
 #' @examples
-#' # create data.frame
-#' numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
-#' labelled.numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
-#' attributes(labelled.numeric)$label <- "my_variable_label"
-#' df <- data.frame(numeric, labelled.numeric)
-#' \dontrun{
-#' View(df)}
+#' x <- browse(mtcars)
+#' # then call View(x)
 
 #' @export
 browse <- function(x) {

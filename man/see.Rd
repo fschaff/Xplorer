@@ -3,7 +3,7 @@
 \name{see}
 \alias{see}
 \alias{codebook}
-\title{Display Variable Details (Stata’s ‘codebook’ on Steroids)}
+\title{Display Variable Details}
 \usage{
 see(x)
 
@@ -23,12 +23,7 @@ This function displays the following details of variable:
 See is an S3 generic and currently works with objects of class 'character', 'factor', 'numeric', 'data.frame' and 'labelled'.
 }
 \examples{
-numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
-see(numeric)
-
-labelled.numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
-attributes(labelled.numeric)$label <- "my_variable_label"
-see(labelled.numeric)
+see(mtcars$mpg)
 }
 \keyword{codebook}
 \keyword{see}

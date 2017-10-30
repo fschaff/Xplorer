@@ -1,4 +1,4 @@
-#' Display Variable Details (Stata’s ‘codebook’ on Steroids)
+#' Display Variable Details
 #' @description This function displays the following details of variable:
 #' \itemize{
 #'  \item{attributes (i.e. useful to inspect labels)}
@@ -12,12 +12,7 @@
 #' @keywords see codebook
 #' @import utils
 #' @examples
-#' numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
-#' see(numeric)
-#'
-#' labelled.numeric <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
-#' attributes(labelled.numeric)$label <- "my_variable_label"
-#' see(labelled.numeric)
+#' see(mtcars$mpg)
 
 #' @export
 see <- function (x) {
