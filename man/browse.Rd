@@ -14,8 +14,12 @@ Browse through your dataset by searching variable names and labels via the searc
 Browser shows variable details such as names, labels, range, distinct values, class, typeof, non-missing cases and missing cases.
 }
 \examples{
-x <- browse(mtcars)
-# then call View(x)
+# Either call browse() on a data.frame directly...
+browse(mtcars)
+
+# ...or assign and open with View():
+df <- browse(mtcars)
+# View(df)
 }
 \keyword{browse}
 \keyword{browser}

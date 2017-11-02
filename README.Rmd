@@ -54,18 +54,23 @@ see(numeric.labelled)
 
 The aim of `browse()` is to create a data.frame that allows you to use the search field in the Rstudio `View()` function to search for variables based on their names or values, which is currently not possible. In particular if a dataset is very large and no comprehensive codebook is available, quickly searching for variable names makes finding variables of interest much easier. 
 
-If you are not working in Rstudio, `View()` may not work in the same way and may not offer a search option. Hence `browse()` does not call `View()` directly. Instead, store the data in a new object first, which then can be opened with `View()` in Rstudio.
+If you are not working in Rstudio, `View()` may not work in the same way and may not offer a search option. Hence `browse()` does not call `View()` directly. Instead, store the data in a new object first, which then can be opened with `View()` in Rstudio. `browse()` can also be called on a data.frame directly to print the output to the console.
 
 #### Example
 
 ```{r}
 library("Xplorer")
 
-# create an example data.frame and add some variable labels
+# Create an example data.frame and add some variable labels
 data(mtcars)
 attributes(mtcars$mpg)$label <- "Miles/(US) gallon"
 attributes(mtcars$disp)$label <- "Displacement (cu.in.)"
 attributes(mtcars$drat)$label <- "Rear axle ratio"
+
+# Call browse() directly...
+browse(mtcars)
+
+# ...or assign to df and open with View()
 df <- browse(mtcars)
 ```
 Then use `View(df)` and use the search field to search variable names and labels.

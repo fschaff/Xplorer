@@ -7,18 +7,27 @@
 #' @import stats
 #' @import utils
 #' @examples
-#' x <- browse(mtcars)
-#' # then call View(x)
+#' # Either call browse() on a data.frame directly...
+#' browse(mtcars)
+#'
+#' # ...or assign and open with View():
+#' df <- browse(mtcars)
+#' # View(df)
 
 #' @export
 browse <- function(x) {
+
+  # test if x is a data.frame
+  if (!is.data.frame(x))
+    stop("x is not a data.frame")
+
+  # create output
   variable.name <- names(x)
   variable.label <- cbind(lapply(x,
                                  function(y) {
                                    if (is.null(attributes(y))) { c("-") }
                                    else if (!is.null(attributes(y)$label)) { as.character(attributes(y)$label) }
                                  }))
-  distinct.values <- cbind(lapply(x, function(y) {length(table(y))} ))
   range <- cbind(lapply(x,
                         function(y) {
                           if (is.character(y)) { c("-") }
@@ -26,13 +35,16 @@ browse <- function(x) {
                           else if (is.numeric(y)) { range(y, na.rm = TRUE, finite = TRUE)}
                           else c(NA_character_)
                         }))
-  N <- colSums(!is.na(x))
-  missings <- colSums(is.na(x))
+  distinct.values <- cbind(lapply(x, function(y) {length(table(y))} ))
   class <- cbind(lapply(x, function(y) {class(y)} ))
   typeof <- cbind(lapply(x, function(y) {typeof(y)} ))
-  data.frame <- data.frame(variable.name, variable.label, range, distinct.values, class, typeof, N, missings)
-  row.names(data.frame) <- NULL
-  return(data.frame)
+  N <- colSums(!is.na(x))
+  missings <- colSums(is.na(x))
+  output <- data.frame(variable.name, variable.label, range, distinct.values, class, typeof, N, missings)
+  row.names(output) <- NULL
+
+  # return output
+  return(output)
   }
 
 
