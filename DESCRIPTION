@@ -2,7 +2,7 @@ Package: Xplorer
 Title: Convenient Data Exploration
 Version: 0.0.1
 Authors@R: person("Florian Simon", "Schaffner", email = "schaffner.florian@gmail.com", role = c("aut", "cre"))
-Description: Functions that help facilitate data exploration.
+Description: Functions that make understanding the structure of objects more convenient. Display extensive details about objects with ease and quickly obtain essential information about data frames in a visually appealing manner.
 Depends: R (>= 3.4.0)
 Imports: stats, utils
 License: MIT + file LICENSE
