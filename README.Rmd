@@ -73,7 +73,7 @@ browse(mtcars)
 # ...or assign to df and open with View()
 df <- browse(mtcars)
 ```
-Then use `View(df)` and use the search field to search variable names and labels.
+Then use `View(df)` and use the search field to search variable names and labels. Or, even simpler, just use `View(browse(mtcars))`.
 
 ## Installation
 
