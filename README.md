@@ -106,18 +106,12 @@ browse(mtcars)
 df <- browse(mtcars)
 ```
 
-Then use `View(df)` and use the search field to search variable names and labels.
+Then use `View(df)` and use the search field to search variable names and labels. Or, even simpler, just use `View(browse(mtcars))`.
 
 Installation
 ------------
 
-You can install Xplorer from CRAN with:
-
-``` r
-install.packages("Xplorer")
-```
-
-Or install the development version from GitHub:
+You can install Xplorer from GitHub with:
 
 ``` r
 # install.packages("devtools")

@@ -77,12 +77,7 @@ Then use `View(df)` and use the search field to search variable names and labels
 
 ## Installation
 
-You can install Xplorer from CRAN with:
-```{r cran-installation, eval = FALSE}
-install.packages("Xplorer")
-```
-
-Or install the development version from GitHub:
+You can install Xplorer from GitHub with:
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("fschaff/Xplorer")
