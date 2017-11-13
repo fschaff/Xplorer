@@ -64,8 +64,13 @@ library("Xplorer")
 # Create an example data.frame and add some variable labels
 data(mtcars)
 attributes(mtcars$mpg)$label <- "Miles/(US) gallon"
+attributes(mtcars$cyl)$label <- "Number of cylinders"
 attributes(mtcars$disp)$label <- "Displacement (cu.in.)"
+attributes(mtcars$hp)$label <- "Gross horsepower"
 attributes(mtcars$drat)$label <- "Rear axle ratio"
+attributes(mtcars$wt)$label <- "Weight (1000 lbs)"
+attributes(mtcars$qsec)$label <- "1/4 mile time"
+attributes(mtcars$vs)$label <- "V/S"
 
 # Call browse() directly...
 browse(mtcars)

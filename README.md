@@ -72,20 +72,25 @@ library("Xplorer")
 # Create an example data.frame and add some variable labels
 data(mtcars)
 attributes(mtcars$mpg)$label <- "Miles/(US) gallon"
+attributes(mtcars$cyl)$label <- "Number of cylinders"
 attributes(mtcars$disp)$label <- "Displacement (cu.in.)"
+attributes(mtcars$hp)$label <- "Gross horsepower"
 attributes(mtcars$drat)$label <- "Rear axle ratio"
+attributes(mtcars$wt)$label <- "Weight (1000 lbs)"
+attributes(mtcars$qsec)$label <- "1/4 mile time"
+attributes(mtcars$vs)$label <- "V/S"
 
 # Call browse() directly...
 browse(mtcars)
 #>    variable.name        variable.label        range distinct.values
 #> 1            mpg     Miles/(US) gallon   10.4, 33.9              25
-#> 2            cyl                     -         4, 8               3
+#> 2            cyl   Number of cylinders         4, 8               3
 #> 3           disp Displacement (cu.in.)  71.1, 472.0              27
-#> 4             hp                     -      52, 335              22
+#> 4             hp      Gross horsepower      52, 335              22
 #> 5           drat       Rear axle ratio   2.76, 4.93              22
-#> 6             wt                     - 1.513, 5.424              29
-#> 7           qsec                     -   14.5, 22.9              30
-#> 8             vs                     -         0, 1               2
+#> 6             wt     Weight (1000 lbs) 1.513, 5.424              29
+#> 7           qsec         1/4 mile time   14.5, 22.9              30
+#> 8             vs                   V/S         0, 1               2
 #> 9             am                     -         0, 1               2
 #> 10          gear                     -         3, 5               3
 #> 11          carb                     -         1, 8               6
