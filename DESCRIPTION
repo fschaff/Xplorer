@@ -1,7 +1,7 @@
 Package: Xplorer
 Title: Convenient Data Exploration
 Version: 0.0.1
-Authors@R: person("Florian Simon", "Schaffner", email = "schaffner.florian@gmail.com", role = c("aut", "cre"))
+Authors@R: person("Florian Simon", "Schaffner", email = "schaffner.florian@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3352-6191"))
 Description: Functions that make understanding the structure of objects more convenient. Display extensive details about objects with ease and quickly obtain essential information about data frames in a visually appealing manner.
 Depends: R (>= 3.4.0)
 Imports: stats, utils

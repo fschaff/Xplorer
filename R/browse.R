@@ -22,8 +22,8 @@ browse <- function(x) {
     stop("x is not a data.frame")
 
   # create output
-  variable.name <- names(x)
-  variable.label <- cbind(lapply(x,
+  variable_name <- names(x)
+  variable_label <- cbind(lapply(x,
                                  function(y) {
                                    if (is.null(attributes(y))) { c("-") }
                                    else if (!is.null(attributes(y)$label)) { as.character(attributes(y)$label) }
@@ -35,12 +35,12 @@ browse <- function(x) {
                           else if (is.numeric(y)) { range(y, na.rm = TRUE, finite = TRUE)}
                           else c(NA_character_)
                         }))
-  distinct.values <- cbind(lapply(x, function(y) {length(table(y))} ))
+  distinct_values <- cbind(lapply(x, function(y) {length(table(y))} ))
   class <- cbind(lapply(x, function(y) {class(y)} ))
   typeof <- cbind(lapply(x, function(y) {typeof(y)} ))
   N <- colSums(!is.na(x))
   missings <- colSums(is.na(x))
-  output <- data.frame(variable.name, variable.label, range, distinct.values, class, typeof, N, missings)
+  output <- data.frame(variable_name, variable_label, range, distinct_values, class, typeof, N, missings)
   row.names(output) <- NULL
 
   # return output
