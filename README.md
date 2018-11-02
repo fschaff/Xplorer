@@ -82,7 +82,7 @@ attributes(mtcars$vs)$label <- "V/S"
 
 # Call browse() directly...
 browse(mtcars)
-#>    variable.name        variable.label        range distinct.values
+#>    variable_name        variable_label        range distinct_values
 #> 1            mpg     Miles/(US) gallon   10.4, 33.9              25
 #> 2            cyl   Number of cylinders         4, 8               3
 #> 3           disp Displacement (cu.in.)  71.1, 472.0              27
@@ -120,7 +120,7 @@ You can install Xplorer from GitHub with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("fschaff/Xplorer")
+remotes::install_github("fschaffner/Xplorer")
 ```
 
 Please report issues or requests for additional functionality to <https://github.com/fschaff/Xplorer/issues>.
