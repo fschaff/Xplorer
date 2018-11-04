@@ -84,7 +84,6 @@ Then use `View(df)` and use the search field to search variable names and labels
 
 You can install Xplorer from GitHub with:
 ```{r gh-installation, eval = FALSE}
-# install.packages("remotes")
 remotes::install_github("fschaffner/Xplorer")
 ```
 

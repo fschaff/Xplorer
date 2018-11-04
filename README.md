@@ -119,7 +119,6 @@ Installation
 You can install Xplorer from GitHub with:
 
 ``` r
-# install.packages("remotes")
 remotes::install_github("fschaffner/Xplorer")
 ```
 
