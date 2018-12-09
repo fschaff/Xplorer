@@ -6,7 +6,7 @@
 #'  \item{table (frequency and percentage of values)}
 #'  \item{summary statistics}
 #' }
-#' See is an S3 generic and currently works with objects of class 'character', 'factor', 'numeric', 'data.frame' and 'labelled'.
+#' See is an S3 generic and currently works with objects of class 'character', 'factor', 'numeric', 'data.frame', 'labelled', and 'haven_labelled'.
 #'
 #' @param x The object to be displayed in the console.
 #' @keywords see codebook
@@ -131,6 +131,14 @@ see.data.frame <- function(x) {
 
 #' @export
 see.labelled <- function(x) {
+  if (is.character(x)) see.character(x)
+  if (is.factor(x)) see.factor(x)
+  if (is.numeric(x)) see.numeric(x)
+  if (is.data.frame(x)) see.data.frame(x)
+}
+
+#' @export
+see.haven_labelled <- function(x) {
   if (is.character(x)) see.character(x)
   if (is.factor(x)) see.factor(x)
   if (is.numeric(x)) see.numeric(x)
