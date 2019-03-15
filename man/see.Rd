@@ -20,7 +20,7 @@ This function displays the following details of variable:
  \item{table (frequency and percentage of values)}
  \item{summary statistics}
 }
-See is an S3 generic and currently works with objects of class 'character', 'factor', 'numeric', 'data.frame', 'labelled', and 'haven_labelled'.
+See is an S3 generic and currently works with objects of class 'character', 'factor', 'numeric', 'data.frame', 'labelled', 'haven_labelled', 'POSIXct' and 'Date'.
 }
 \examples{
 see(mtcars$mpg)
