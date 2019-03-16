@@ -1,30 +1,37 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-Xplorer: Convenient Data Exploration with see() and browse()
-============================================================
 
-Xplorer provides two simple functions to facilitate the exploration of datasets in R, [`see()`](#see) and [`browse()`](#browse).
+# Xplorer <a href='https://florianschaffner.com'><img src='man/figures/Xplorer.png' align="right" height="139" /></a>
 
-see()
------
+Xplorer provides a set of functions for convenient exploration of
+datasets in R, [`see()`](#see) and [`browse()`](#browse).
+
+## see()
 
 `see()` prints the following details of an object to the console:
 
--   attributes (useful to inspect labels)
--   class, typeof, mode, storage.mode
--   table (frequency and percentage of values)
--   summary statistics
+  - attributes (useful to inspect labels)
+  - class, typeof, mode, storage.mode
+  - table (frequency and percentage of values)
+  - summary statistics
 
-There are several other packages which attempt to do someting similar, but none of them offers the ease of use and thourough inspection of ojects. For example, base R offers the functions `summary()`, `str()` and `structure()`. However, each of those is limited in what they display and leave other aspects untouched. `see()` combines a number of functions that would have to be invoked seperately and mirrors Stata's 'codebook'.
+There are several other packages which attempt to do someting similar,
+but none of them offers the ease of use and thourough inspection of
+ojects. For example, base R offers the functions `summary()`, `str()`
+and `structure()`. However, each of those is limited in what they
+display and leave other aspects untouched. `see()` combines a number of
+functions that would have to be invoked seperately and mirrors Stata’s
+‘codebook’.
 
-`see()`is an S3 generic and currently comes with the following data types:
+`see()`is an S3 generic and currently comes with the following data
+types:
 
--   character
--   factor
--   numeric
--   data.frame
--   labelled
--   default (all other types)
+  - character
+  - factor
+  - numeric
+  - data.frame
+  - labelled
+  - default (all other types)
 
 #### Example
 
@@ -57,12 +64,20 @@ see(numeric.labelled)
 #>  10        0               4   1   4    3      3      1.054093 1.111111
 ```
 
-browse()
---------
+## browse()
 
-The aim of `browse()` is to create a data.frame that allows you to use the search field in the Rstudio `View()` function to search for variables based on their names or values, which is currently not possible. In particular if a dataset is very large and no comprehensive codebook is available, quickly searching for variable names makes finding variables of interest much easier.
+The aim of `browse()` is to create a data.frame that allows you to use
+the search field in the Rstudio `View()` function to search for
+variables based on their names or values, which is currently not
+possible. In particular if a dataset is very large and no comprehensive
+codebook is available, quickly searching for variable names makes
+finding variables of interest much easier.
 
-If you are not working in Rstudio, `View()` may not work in the same way and may not offer a search option. Hence `browse()` does not call `View()` directly. Instead, store the data in a new object first, which then can be opened with `View()` in Rstudio. `browse()` can also be called on a data.frame directly to print the output to the console.
+If you are not working in Rstudio, `View()` may not work in the same way
+and may not offer a search option. Hence `browse()` does not call
+`View()` directly. Instead, store the data in a new object first, which
+then can be opened with `View()` in Rstudio. `browse()` can also be
+called on a data.frame directly to print the output to the console.
 
 #### Example
 
@@ -111,10 +126,10 @@ browse(mtcars)
 df <- browse(mtcars)
 ```
 
-Then use `View(df)` and use the search field to search variable names and labels. Or, even simpler, just use `View(browse(mtcars))`.
+Then use `View(df)` and use the search field to search variable names
+and labels. Or, even simpler, just use `View(browse(mtcars))`.
 
-Installation
-------------
+## Installation
 
 You can install Xplorer from GitHub with:
 
@@ -122,4 +137,5 @@ You can install Xplorer from GitHub with:
 remotes::install_github("fschaffner/Xplorer")
 ```
 
-Please report issues or requests for additional functionality to <https://github.com/fschaffner/Xplorer/issues>.
+Please report issues or requests for additional functionality to
+<https://github.com/fschaffner/Xplorer/issues>.

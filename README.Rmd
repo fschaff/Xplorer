@@ -12,9 +12,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Xplorer: Convenient Data Exploration with see() and browse()
+# Xplorer <a href='https://florianschaffner.com'><img src='man/figures/Xplorer.png' align="right" height="139" /></a>
 
-Xplorer provides two simple functions to facilitate the exploration of datasets in R, [`see()`](#see) and [`browse()`](#browse).
+Xplorer provides a set of functions for convenient exploration of datasets in R, [`see()`](#see) and [`browse()`](#browse).
 
 ## see() {#see}
 
