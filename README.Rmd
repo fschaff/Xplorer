@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Xplorer <a href='https://florianschaffner.com'><img src='man/figures/Xplorer.png' align="right" height="139" /></a>
+# Xplorer <a href='https://florianschaffner.com/Xplorer'><img src='man/figures/Xplorer.png' align="right" height="139" /></a>
 
 Xplorer provides a set of functions for convenient exploration of datasets in R, [`see()`](#see) and [`browse()`](#browse).
 
