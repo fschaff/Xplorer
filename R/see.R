@@ -14,9 +14,9 @@
 #' @examples
 #' see(mtcars$mpg)
 
+# sjmisc::descr() has great inspiration: https://strengejacke.github.io/sjmisc/reference/descr.html
 
-
-# I NEED TO ADD A METHOD FOR CLASS LOGICAL!!!!!
+# NEED TO ADD A METHOD FOR CLASS LOGICAL!!!!!
 # This does not work:
 #> log <- c(TRUE, FALSE)
 #> see(log)
